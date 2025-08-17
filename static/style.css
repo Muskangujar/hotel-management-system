@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+nav a {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 15px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background: #0056b3;
+}
+
+.form input, .form button {
+  display: block;
+  margin: 8px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form button {
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: darkgreen;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: #f0f0f0;
+}
+
+.flashes {
+  list-style: none;
+  padding: 0;
+}
+
+.flashes li {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.flashes .success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.flashes .danger {
+  background: #f8d7da;
+  color: #721c24;
+}
