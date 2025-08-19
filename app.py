@@ -1,5 +1,6 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, flash
+import os
 import mysql.connector
 from mysql.connector import Error
 
@@ -10,17 +11,17 @@ app.secret_key = 'your-secret-key-here'  # Needed for flash messages
 def get_db_connection():
     try:
         conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="$Muskan12",
-            database="hotel_db",
-            port=3306
+            host=os.getenv("DB_HOST", "localhost"),
+            user=os.getenv("DB_USER", "root"),
+            password=os.getenv("DB_PASSWORD", "$Muskan12"),
+            database=os.getenv("DB_NAME", "hotel_db"),
+            port=int(os.getenv("DB_PORT", 3306))
         )
         return conn
     except Error as e:
         flash(f"Database connection error: {str(e)}", 'danger')
         return None
-
+    
 # --- Routes ---
 
 # Home Page
